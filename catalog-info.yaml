@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dotnetjenkinsgithub291024-gitops
+  description: This is GitOps manifest for dotnetjenkinsgithub291024   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dotnetjenkinsgithub291024
+    jenkins.io/job-full-name: dotnetjenkinsgithub291024-gitops
+    backstage.io/kubernetes-id: dotnetjenkinsgithub291024 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dotnetjenkinsgithub291024
